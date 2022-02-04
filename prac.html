@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        function printvalue()
+        {
+            var name=document.form1.name.value;
+            alert("Welcome: " +name);
+
+        }
+        function getvalue(){
+            var obj=document.getElementById("myText").value;
+            alert("Welcome Mr." +obj);
+        }
+
+
+    </script>
+
+    <form name="form1">
+    Enter name: <input type="text" name="name">
+    <input type="button" value="Enter text" onclick="printvalue()">
+
+    </form><br>
+
+    
+
+    <form name="form2">
+        Enter name: <input type="text" id="myText" name="obj">
+        <input type="button" value="Enter the name" onclick="getvalue()">
+        
+        </form>
+
+
+
+
+        <html>
+            <body>
+            <script type="text/javascript">  
+            function validate(){  
+            var name=document.f1.name.value;  
+            var passwordlength=document.f1.password.value.length;  
+            var status=false;  
+            if(name==""){  
+            document.getElementById("namelocation").innerHTML=  
+            " <img src='http://www.javatpoint.com/javascriptpages/images/unchecked.gif'/> Please enter your name"; status=false;
+            }else{  
+            document.getElementById("namelocation").innerHTML=" <img src='http://www.javatpoint.com/javascriptpages/images/checked.gif'/>";  
+            status=true;
+            }  
+              
+            if(passwordlength<6){  
+            document.getElementById("passwordlocation").innerHTML=  
+            " <img src='http://www.javatpoint.com/javascriptpages/images/unchecked.gif'/> Password must be greater than 6";  
+            status=false; 
+            }else{  
+            document.getElementById("passwordlocation").innerHTML=" <img src='http://www.javatpoint.com/javascriptpages/images/checked.gif'/>";  
+            }  
+              
+            return status;  
+            }  
+            </script>  
+            <form name="f1" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validate()">  
+            <table>
+            <tr><td>Name:</td><td><input type="text" name="name"/>  
+            <span id="namelocation" style="color:red"></span></td></tr> 
+            <tr><td>Password:</td><td><input type="password" name="password"/>  
+            <span id="passwordlocation" style="color:red"></span></td></tr>
+            <tr><td colspan="2"><input type="submit" value="register"/>  </td></tr>
+            </table>
+            </form>  
+            </body>
+            </html>
+
+
+
+            <html>
+<body>
+<script>  
+function validateemail()  
+{  
+var x=document.myform.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+}  
+</script>  
+<body>  
+<form name="myform"  method="post" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validateemail();">  
+Email: <input type="text" name="email"><br/>  
+  
+<input type="submit" value="register">  
+</form>  
+</body>
+</html>
+
+ 
+
+
+    
+</body>
+</html>
